@@ -1,0 +1,44 @@
+   	
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <title>Title</title>
+    </head>
+    <body>
+        <div class="col-md-6 offset-md-3">
+            <br>
+            <h2 class="text-center">collage </h2>
+            <br>
+            {% if collages %}
+                {% for collage in collages %}
+                   <div class="card-group">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title"> {{ collage.name }}</h2>
+                            <hr>
+                          
+                            <p class="card-img fulid style="width: 10rem;"> <img src="{{ collage.image.url }} " width="75px" height="75px"></p>
+                          
+                            
+
+
+
+                            <a href="#" class="card-text">Time: {{  collage.upload_date }}</a>
+                        </div>
+                    </div>
+                    <br> </br>
+                </div>
+                {% endfor %}
+
+            {% endif %}
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+    </body>
+</html>
+
+
