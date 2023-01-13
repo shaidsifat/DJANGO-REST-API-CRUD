@@ -24,6 +24,7 @@ def product(request):
    elif request.method == 'POST':
         serializer = PostSerializer(data=request.data)
         if serializer.is_valid():
+             
         	 serializer.save()
         	 return Response(serializer.data,status=status.TTP_201_CREATED)
         return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)	
